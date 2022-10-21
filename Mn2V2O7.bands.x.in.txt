@@ -1,0 +1,77 @@
+&CONTROL
+    calculation = "bands"
+    max_seconds =  8.64000e+04
+    pseudo_dir  = "C:\Users\PRITISH\.burai\.pseudopot"
+/
+
+&SYSTEM
+    a                         =  6.53906e+00
+    b                         =  8.98513e+00
+    c                         =  5.10109e+00
+    cosac                     = -2.09892e-01
+    degauss                   =  1.00000e-02
+    ecutrho                   =  2.25000e+02
+    ecutwfc                   =  2.50000e+01
+    ibrav                     = -12
+    nat                       = 22
+    nbnd                      = 144
+    nspin                     = 2
+    ntyp                      = 3
+    occupations               = "smearing"
+    smearing                  = "gaussian"
+    starting_magnetization(1) =  2.00000e-01
+    starting_magnetization(2) =  2.00000e-01
+    starting_magnetization(3) =  0.00000e+00
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  4.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+&BANDS
+    lsym           = .FALSE.
+    spin_component = 1
+/
+
+K_POINTS {tpiba_b}
+6
+gG     20
+Y      20
+D      20
+Z      0
+X      20
+A      0
+
+ATOMIC_SPECIES
+Mn2+   54.93805  Mn.pbe-sp-van.UPF
+V5+    50.94150  V.pbe-n-van.UPF
+O2-    15.99940  O.pbe-rrkjus.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Mn2+    3.269528   2.809767   0.000000
+Mn2+    3.269528   6.175364   0.000000
+Mn2+    0.000000   7.302333   0.000000
+Mn2+    0.000000   1.682798   0.000000
+V5+     4.446601   0.000000   1.976445
+V5+     1.021813   0.000000   3.011026
+V5+     1.177073   4.492566   1.976445
+V5+     4.291341   4.492566   3.011026
+O2-     2.734207   0.000000   2.493736
+O2-     5.245261   0.000000   3.575708
+O2-     0.223153   0.000000   1.411764
+O2-     4.550558   1.456283   1.029978
+O2-     0.917856   1.456283   3.957494
+O2-     0.917856   7.528848   3.957494
+O2-     4.550558   7.528848   1.029978
+O2-    -0.535320   4.492566   2.493736
+O2-     1.975734   4.492566   3.575708
+O2-     3.492681   4.492566   1.411764
+O2-     1.281031   5.948849   1.029978
+O2-     4.187383   5.948849   3.957494
+O2-     4.187383   3.036283   3.957494
+O2-     1.281031   3.036283   1.029978
+
